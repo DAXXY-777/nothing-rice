@@ -1,0 +1,37 @@
+conky.config = {
+    alignment = 'top_left',
+    background = true,
+    double_buffer = true,
+    cpu_avg_samples = 2,
+    net_avg_samples = 2,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    update_interval = 1.0,
+    total_run_times = 0,
+    own_window = true,
+    own_window_type = 'desktop',
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_class = 'Conky',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    minimum_width = 300, minimum_height = 100,
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = false,
+    use_xft = true,
+    font = 'FiraCode Nerd Font:size=10',
+    xftalpha = 0.9,
+    default_color = '#FFFFFF',
+    gap_x = 30,
+    gap_y = 30,
+    lua_load = '',
+};
+
+conky.text = [[
+${font FiraCode Nerd Font:bold:size=12}${color #FF8888}󰜎 Nothing UI Widget${color}
+${font}${color grey}CPU: ${cpu}%   RAM: ${memperc}%   Battery: ${battery_percent BAT0}%
+${color}Time: ${time %H:%M:%S} | Date: ${time %d %b %Y}
+]];

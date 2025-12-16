@@ -1,0 +1,8 @@
+(defwidget system-info []
+  (box :orientation "vertical" :class "widget system-info"
+    (label :class "line" :text (bash "scripts/cpu.sh"))
+    (label :class "line" :text (bash "scripts/ram.sh"))
+    (label :class "line" :text (bash "scripts/disk.sh"))
+    (label :class "line" :text (bash "scripts/battery.sh"))
+  )
+)

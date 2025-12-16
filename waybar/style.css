@@ -1,0 +1,79 @@
+* {
+  font-family: "Nothing Font", "JetBrains Mono", "monospace";
+  font-size: 13px;
+  color: white;
+}
+
+/* Main Bar Window */
+window#waybar {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ========== WORKSPACES ========== */
+#workspaces {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+  padding: 4px 10px;
+  margin: 0 10px;
+}
+
+#workspaces button {
+  background: transparent;
+  border: none;
+  margin: 0 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: #aaa;
+  font-weight: bold;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#workspaces button.active {
+  background-color: #ff003c;
+  color: white;
+}
+
+#workspaces button:hover {
+  background-color: rgba(255, 0, 60, 0.4);
+  color: white;
+}
+
+/* ========== MODULES STYLE (CLOCK, POWER, ETC) ========== */
+#clock,
+#battery,
+#bluetooth,
+#pulseaudio,
+#network,
+#custom-launcher,
+#custom-power {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 4px 12px;
+  margin: 0 6px;
+  border-radius: 999px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for all modules */
+#clock:hover,
+#battery:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#network:hover,
+#custom-launcher:hover,
+#custom-power:hover {
+  background-color: #ff003c;
+  color: white;
+}
+
+/* Custom Icon Colors */
+#custom-launcher {
+  color: #ff003c;
+}
+
+#custom-power {
+  color: white;
+}
+

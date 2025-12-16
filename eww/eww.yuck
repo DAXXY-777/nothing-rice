@@ -1,0 +1,23 @@
+(include "weather.yuck")
+(include "temperature.yuck")
+(include "date.yuck")
+(include "launcher-grid.yuck")
+(include "system-info.yuck")
+
+(defwindow main
+  :monitor 0
+  :geometry (geometry :x "0" :y "0" :width "100%" :height "100%")
+  :anchor "top left"
+  :windowtype "dock"
+  :stacking "bottom"
+  :wm-ignore true
+  :decoration false
+  "main"
+  (box :orientation "vertical" :halign "center"
+    (weather)
+    (temperature)
+    (date)
+    (launcher-grid)
+    (system-info)
+  )
+)

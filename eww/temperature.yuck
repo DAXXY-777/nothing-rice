@@ -1,0 +1,6 @@
+(defwidget temperature []
+  (box :orientation "horizontal" :class "widget temperature"
+    (label :class "icon" :text "🌡")
+    (label :text (bash "scripts/temperature.sh"))
+  )
+)

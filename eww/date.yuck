@@ -1,0 +1,5 @@
+(defwidget date []
+  (box :orientation "horizontal" :class "widget date"
+    (label :text (bash "scripts/date.sh"))
+  )
+)

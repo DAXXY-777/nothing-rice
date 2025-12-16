@@ -1,0 +1,32 @@
+(defwidget launcher-grid []
+  (box :orientation "vertical" :class "widget launcher-grid"
+    (box :orientation "horizontal" :space-evenly true
+      (box :class "app" :orientation "vertical"
+        (label :text "📁")
+        (label :text "Files")
+      )
+      (box :class "app" :orientation "vertical"
+        (label :text "🌐")
+        (label :text "Browser")
+      )
+      (box :class "app" :orientation "vertical"
+        (label :text "🖥")
+        (label :text "Editor")
+      )
+    )
+    (box :orientation "horizontal" :space-evenly true
+      (box :class "app" :orientation "vertical"
+        (label :text "✉")
+        (label :text "Mail")
+      )
+      (box :class "app" :orientation "vertical"
+        (label :text "🎧")
+        (label :text "Music")
+      )
+      (box :class "app" :orientation "vertical"
+        (label :text "⚙")
+        (label :text "Settings")
+      )
+    )
+  )
+)

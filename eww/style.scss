@@ -1,0 +1,34 @@
+$accent: #FF3B3B;
+$bg-color: #000000;
+$widget-bg: #222222;
+$text-color: #FFFFFF;
+$font: 'Nothing Font', sans-serif;
+$radius: 10px;
+$padding: 10px;
+$margin: 5px;
+
+body {
+  background-color: $bg-color;
+  font-family: $font;
+  color: $text-color;
+}
+
+.widget {
+  background-color: $widget-bg;
+  color: $text-color;
+  border: 1px solid $accent;
+  border-radius: $radius;
+  padding: $padding;
+  margin: $margin 0;
+}
+.app {
+  width: 60px;
+  text-align: center;
+}
+.app label {
+  font-size: 12px;
+  margin: 2px 0;
+}
+.icon {
+  margin-right: 6px;
+}

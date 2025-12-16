@@ -1,0 +1,65 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-top": 10,
+  "margin-left": 20,
+  "margin-right": 20,
+  "height": 30,
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "bluetooth", "network", "battery", "custom/launcher", "custom/power"],
+
+  "hyprland/workspaces": {
+    "active-only": false,
+    "format": "{id}",
+    "on-click": "hyprctl dispatch workspace {}",
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    }
+  },
+
+   "clock": {
+   "format": " {:%I:%M %p}",
+   "tooltip-format": "{:%A, %d %B %Y}"
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": " muted",
+    "tooltip": false
+  },
+
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": " off",
+    "tooltip": false
+  },
+
+  "network": {
+    "format-wifi": " {essid}",
+    "format-ethernet": " Ethernet",
+    "format-disconnected": "⚠ No Net",
+    "tooltip": false
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": false
+  },
+
+  "custom/launcher": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "rofi -show drun"
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "~/.config/rofi/powermenu.sh",
+    "tooltip": false
+  }
+}
+
