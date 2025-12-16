@@ -1,5 +1,4 @@
-<img width="1366" height="768" alt="2025-05-14-195842_hyprshot" src="https://github.com/user-attachments/assets/30de3c62-f725-4341-beef-a96110cdc12c" /><img width="1366" height="768" alt="2025-05-14-195822_hyprshot" src="https://github.com/user-attachments/assets/957403e9-ca2d-4ad1-9e97-d89bc966d45f" /># Nothing-Inspired Desktop Rice
-
+# Nothing-Inspired Desktop Rice
 A Linux desktop customization (rice) inspired by the minimalist and retro-tech aesthetic of the "Nothing" brand. This setup uses a combination of modern tools to create a cohesive and visually appealing Wayland environment.
 
 ##  Screenshots
