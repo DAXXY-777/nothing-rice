@@ -31,7 +31,7 @@ conky.config = {
 };
 
 conky.text = [[
-${font FiraCode Nerd Font:bold:size=12}${color #FF8888}󰜎 Nothing UI Widget${color}
-${font}${color grey}CPU: ${cpu}%   RAM: ${memperc}%   Battery: ${battery_percent BAT0}%
+${font Nulshock:size=12}${color #089ec7}Nothing UI${color}
+${font FiraCode Nerd Font:size=10}${color grey}CPU: ${cpu}%   RAM: ${memperc}%   Battery: ${execi 10 bash -lc 'bat=$(ls -d /sys/class/power_supply/BAT* 2>/dev/null | head -n1); [ -n "$bat" ] && cat "$bat/capacity" || echo N/A'}%
 ${color}Time: ${time %H:%M:%S} | Date: ${time %d %b %Y}
 ]];

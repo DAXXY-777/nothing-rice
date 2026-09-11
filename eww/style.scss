@@ -1,8 +1,8 @@
-$accent: #FF3B3B;
+$accent: #089ec7;
 $bg-color: #000000;
 $widget-bg: #222222;
 $text-color: #FFFFFF;
-$font: 'Nothing Font', sans-serif;
+$font: 'FiraCode Nerd Font', 'JetBrains Mono Nerd Font', sans-serif;
 $radius: 10px;
 $padding: 10px;
 $margin: 5px;
@@ -20,6 +20,10 @@ body {
   border-radius: $radius;
   padding: $padding;
   margin: $margin 0;
+}
+.title {
+  font-family: 'Nulshock', $font;
+  color: $accent;
 }
 .app {
   width: 60px;

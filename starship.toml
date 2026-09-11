@@ -38,7 +38,7 @@ color_black = '#000000'   # Deep black
 color_bg1 = '#1a1a1a'     # Widget background black
 color_bg3 = '#2a2a2a'     # Slightly lighter black for contrast
 color_grey = '#555555'    # Mid grey
-color_red = '#f44336'     # Nothing's signature red
+color_red = '#089ec7'     # Unified accent
 color_white = '#cccccc'   # Muted white
 
 # Modules (same as before, just new colors)

@@ -19,6 +19,7 @@ This rice includes configuration for the following applications:
 -   **Widgets**: [Eww](https://github.com/elkowars/eww) & [Conky](https://github.com/brndnmtthws/conky)
 -   **System Fetch**: [Neofetch](https://github.com/dylanaraps/neofetch)
 -   **Lock Screen**: [hyprlock](https://hyprland.org/)
+-   **Idle Manager**: [hypridle](https://wiki.hyprland.org/Hypr-Ecosystem/hypridle/)
 
 ## Configuration Details
 
@@ -27,11 +28,12 @@ This rice includes configuration for the following applications:
 -   **`hypr/hyprland.conf`**: The core of the window manager setup. It defines window behavior, animations, gaps, borders, and keybindings.
 -   **`hypr/hyprlock.conf`**: Configuration for the lock screen, styled to match the theme.
 -   **`hypr/hyprpaper.conf`**: Sets the desktop wallpaper. The current wallpaper is a Nothing-style blurred background.
+-   **`hypr/hypridle.conf`**: Handles idle locking, display sleep, and suspend timers.
 
 ### 🔴 Waybar
 
 -   **`waybar/config`**: Defines the modules shown on the bar (workspaces, clock, system tray, etc.).
--   **`waybar/style.css`**: Provides the styling for the bar, featuring rounded modules with a semi-transparent black background and the signature "Nothing" red as an accent color.
+-   **`waybar/style.css`**: Provides the styling for the bar, featuring rounded modules with a semi-transparent black background and `#089ec7` as the unified accent color.
 
 ### 🔴 Rofi
 
@@ -44,7 +46,7 @@ This setup includes an extensive collection of Rofi themes, primarily based on t
 
 ### 🔴 Kitty & Starship
 
--   **`kitty/kitty.conf`**: A minimal configuration for the Kitty terminal, setting the `Nothing Font`, a transparent background, and a color scheme that matches the overall rice.
+-   **`kitty/kitty.conf`**: A minimal configuration for the Kitty terminal, setting `FiraCode Nerd Font`, a transparent background, and a color scheme that matches the overall rice.
 -   **`starship.toml`**: A custom prompt that displays git status, programming language versions, and other useful info, styled with a unique `nothing_black` color palette.
 
 ### 🔴 Widgets (Eww & Conky)
@@ -59,13 +61,17 @@ This setup includes an extensive collection of Rofi themes, primarily based on t
 
 ## Installation
 
-1.  **Backup your existing configs**: Before proceeding, make sure to back up your current configuration files in `~/.config/`.
+1.  **Back up only the config you are about to replace**. Do not move or replace the entire `~/.config` directory.
     ```bash
-    mv ~/.config ~/.config.bak
+    cp -a ~/.config/hypr ~/.config/hypr.bak 2>/dev/null || true
+    cp -a ~/.config/waybar ~/.config/waybar.bak 2>/dev/null || true
+    cp -a ~/.config/rofi ~/.config/rofi.bak 2>/dev/null || true
+    cp -a ~/.config/kitty ~/.config/kitty.bak 2>/dev/null || true
+    cp -a ~/.config/fish ~/.config/fish.bak 2>/dev/null || true
     ```
 
 2.  **Install Dependencies**: Ensure you have all the necessary applications and fonts installed. This includes:
-    -   `hyprland`, `hyprlock`, `hyprpaper`
+    -   `hyprland`, `hyprlock`, `hyprpaper`, `hypridle`
     -   `waybar`
     -   `rofi`
     -   `kitty`
@@ -74,17 +80,25 @@ This setup includes an extensive collection of Rofi themes, primarily based on t
     -   `conky`
     -   `neofetch`
     -   `fish` (or you can adapt the Starship prompt for your preferred shell)
-    -   Fonts: `FiraCode Nerd Font`, `JetBrains Mono Nerd Font`, `Nothing Font`.
+    -   Screenshot and clipboard helpers: `grim`, `slurp`, `wl-clipboard`, `cliphist`
+    -   Fonts: `Nulshock`, `FiraCode Nerd Font`, `JetBrains Mono Nerd Font`.
 
-3.  **Clone the Repository**:
+3.  **Clone the repository somewhere outside `~/.config`**:
     ```bash
-    git clone <your-repo-url> ~/.config
+    git clone <your-repo-url> ~/Downloads/nothing-rice
     ```
-    Or, if you've already cloned it elsewhere:
 
-4.  **Copy Files**: Copy the directories from this `rice-backup` folder into your `~/.config` directory.
+4.  **Copy component directories intentionally**:
     ```bash
-    cp -r /path/to/rice-backup/* ~/.config/
+    mkdir -p ~/.config
+    cp -r ~/Downloads/nothing-rice/hypr ~/.config/
+    cp -r ~/Downloads/nothing-rice/waybar ~/.config/
+    cp -r ~/Downloads/nothing-rice/rofi ~/.config/
+    cp -r ~/Downloads/nothing-rice/kitty ~/.config/
+    cp -r ~/Downloads/nothing-rice/fish ~/.config/
+    cp ~/Downloads/nothing-rice/starship.toml ~/.config/starship.toml
+    mkdir -p ~/Pictures/Wallpapers
+    cp ~/Downloads/nothing-rice/wallpaper/nothing-phone-2-blur-wallpaper-1242x2760-15053.jpg ~/Pictures/Wallpapers/
     ```
 
 5.  **Reload**: Reload your window manager or reboot your system for all changes to take effect.

@@ -1,5 +1,5 @@
 * {
-  font-family: "Nothing Font", "JetBrains Mono", "monospace";
+  font-family: "FiraCode Nerd Font", "JetBrains Mono Nerd Font", "Nulshock", "monospace";
   font-size: 13px;
   color: white;
 }
@@ -32,12 +32,12 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background-color: #ff003c;
+  background-color: #089ec7;
   color: white;
 }
 
 #workspaces button:hover {
-  background-color: rgba(255, 0, 60, 0.4);
+  background-color: rgba(8, 158, 199, 0.38);
   color: white;
 }
 
@@ -64,13 +64,13 @@ window#waybar {
 #network:hover,
 #custom-launcher:hover,
 #custom-power:hover {
-  background-color: #ff003c;
+  background-color: #089ec7;
   color: white;
 }
 
 /* Custom Icon Colors */
 #custom-launcher {
-  color: #ff003c;
+  color: #089ec7;
 }
 
 #custom-power {

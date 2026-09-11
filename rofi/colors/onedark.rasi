@@ -9,8 +9,8 @@
     background:     #000000cc;        /* semi-transparent black */
     background-alt: #1a1a1acc;        /* slightly lighter black */
     foreground:     #ffffffcc;        /* soft white text */
-    selected:       #ff003cff;        /* Nothing Phone accent red */
-    active:         #ff3366ff;        /* slightly brighter for active */
-    urgent:         #ff5555ff;        /* softer red for urgent items */
+    selected:       #089ec7ff;        /* unified accent */
+    active:         #27b9e8ff;        /* brighter active accent */
+    urgent:         #ff5555ff;        /* keep urgent items visibly distinct */
 }
 
